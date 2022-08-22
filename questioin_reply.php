@@ -27,8 +27,9 @@
 			<div class="col-md-12">
 				<h3><?php echo $row["qt_title"];?></h3>
 				<?php echo $row["qt_detail"];?>
-				<img src="uploads/<?php echo $row['qt_image'] ?>" width="50%" height="50%">
-				
+				<div class="div">
+					<img src="uploads/image_qt/<?php echo $row['qt_image'] ?>" width="200" height="100%">
+				</div>
 			</div>
 		</div>
 		<hr>
@@ -46,6 +47,16 @@
 				<div class="panel panel-default">
 				  <div class="panel-heading"><strong>(ชือผู้ตอบ <?php echo ($row["m_name"]); ?>)</strong></div>
 				  <div class="panel-body">
+				  <div class="div">
+					<?php
+						if($row["rp_image"]!=null){
+					?>
+					<img src="uploads/reply/<?php echo $row['rp_image'] ?>" width="200" height="100%">
+					<?php
+						}
+					?>
+				</div>
+						
 				    <?php echo $row["rp_detail"]; ?>
 				    <p>&nbsp;</p>
 				    <small>สร้างเมื่อ <?php echo $row["rp_created"]; ?></small>
@@ -64,10 +75,14 @@
 				<div class="panel panel-primary">
 				  <div class="panel-heading">แสดงความคิดเห็น</div>
 				  <div class="panel-body">
-				    <form method="post" action="questioin_reply_send.php">				
+				    <form method="post" action="questioin_reply_send.php" enctype="multipart/form-data">				
 						  <div class="form-group">
 						    <label>ความคิดเห็น</label>
 						    <textarea class="form-control" name="rp_detail" rows="3" placeholder="ระบุรายละเอียด" required></textarea>
+						  </div> 
+						  <div class="form-group">
+						  	<label >รูป</label>
+                            <input type="file" accept="image/*" class="form-control" name="rp_image">
 						  </div>
 						  <input type="hidden" name="qt_id" value="<?php echo $_GET["qt_id"];?>">
 						  <button type="submit" class="btn btn-primary">บันทึก</button>

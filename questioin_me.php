@@ -54,7 +54,7 @@
 						    <td><?php echo $row["qt_created"];?></td>
 								<td width="130">
 									<a class="btn btn-info" href="questioin_edit.php?edit=<?php echo $row["qt_id"]; ?>" role="button">แก้ไข</a>
-									<a class="btn btn-danger" href="questioin_me.php?del=<?php echo $row["qt_id"]; ?>" onclick="return confirm('ท่านต้องการลบแถวนี้ใช่หรือไม่');" role="button">ลบ</a>
+									<a class="btn btn-danger" href="questioin_me.php?del=<?php echo $row["qt_id"]; ?>" onclick="return confirm('ท่านต้องการลบใช่หรือไม่');" role="button">ลบ</a>
 								</td>
 							</tr>
 							<?php 

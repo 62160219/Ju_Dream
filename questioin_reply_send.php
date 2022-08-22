@@ -15,13 +15,19 @@ if(!isset($_SESSION["member_name"])){
 	$created = date("Y-m-d H:i:s");
 	$m_id = $_SESSION["member_id"];
 
-	$sql = "INSERT INTO reply (rp_detail,rp_created,qt_id,m_id) VALUES (?,?,?,?)";
+	$rp_image = $_FILES['rp_image']['name'];
+    $tmp_dir = $_FILES['rp_image']['tmp_name'];
+	$upload_dir = "uploads/reply/".$rp_image;   
+	move_uploaded_file($tmp_dir, $upload_dir);
+
+	$sql = "INSERT INTO reply (rp_detail,rp_created,qt_id,rp_image,m_id) VALUES (?,?,?,?,?)";
 	$stm = $db_con->prepare($sql);//mysql_query
 	// กำหนดค่าสำหรับเพิ่มเข้าในฐานข้อมูล
 	$stm->bindParam("1",$detail);
 	$stm->bindParam("2",$created);
 	$stm->bindParam("3",$id);
-	$stm->bindParam("4",$m_id);
+	$stm->bindParam("4",$rp_image);
+	$stm->bindParam("5",$m_id);
 	$result = $stm->execute();//mysql_query
 		
 	

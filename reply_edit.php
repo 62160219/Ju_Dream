@@ -20,10 +20,14 @@
 				<div class="panel panel-default">
 				  <div class="panel-heading"><strong>แก้ไขความคิดเห็น</strong></div>
 				  <div class="panel-body">
-				    <form method="post" action="reply_send_update.php">
+				    <form method="post" action="reply_send_update.php" enctype="multipart/form-data">
 						  <div class="form-group">
 						    <label>แก้ไข</label>
 						    <textarea class="form-control" name="rp_detail" rows="3" placeholder="ระบุรายละเอียด" required><?php echo $row["rp_detail"];?></textarea>
+						  </div>
+						  <div class="form-group">
+						  	<label>แก้ไขรูป</label>
+                            <input type="file" accept="image/*" class="form-control" name="rp_image">
 						  </div>
 						   <input type="hidden" name="rp_id" id="rp_id" value="<?php echo $row["rp_id"];?>"  />
 						  <button type="submit" class="btn btn-primary">บันทึก</button>

@@ -14,12 +14,12 @@
 
 	$qt_image = $_FILES['qt_image']['name'];
     $tmp_dir = $_FILES['qt_image']['tmp_name'];
-	$upload_dir = "uploads/".$qt_image;   
-	$dir = "uploads/";
+	$upload_dir = "uploads/image_qt/".$qt_image;   
+	$dir = "uploads/image_qt/";
 	if($qt_image){
 		if(!file_exists($upload_dir)){
 			unlink($dir.$r["qt_image"]);
-			move_uploaded_file($tmp_dir, "uploads/" .$qt_image);
+			move_uploaded_file($tmp_dir, "uploads/image_qt/" .$qt_image);
 		}
 	}else{
 		$qt_image = $r["qt_image"];
@@ -29,8 +29,9 @@
 	// กำหนดค่าสำหรับเพิ่มเข้าในฐานข้อมูล
 	$stm->bindParam("1",$title);
 	$stm->bindParam("2",$detail);
-	$stm->bindParam("3",$id);
-	$stm->bindParam("4",$qt_image);
+	$stm->bindParam("3",$qt_image);
+	$stm->bindParam("4",$id);
+	
 	$result =  $stm->execute();//mysql_query
 														
 	if($result){

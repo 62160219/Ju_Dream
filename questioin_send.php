@@ -9,8 +9,9 @@ if (isset($_POST['register'])) {
 
 	$qt_image = $_FILES['qt_image']['name'];
     $tmp_dir = $_FILES['qt_image']['tmp_name'];
-	$upload_dir = "uploads/".$qt_image;   
+	$upload_dir = "uploads/image_qt/".$qt_image;   
 	move_uploaded_file($tmp_dir, $upload_dir);
+
 
 	$sql = "INSERT INTO question (qt_title,qt_detail,qt_created,m_id,qt_image) VALUES (?,?,?,?,?)";
 	$stm = $db_con->prepare($sql);//mysql_query

@@ -20,7 +20,7 @@
 		<hr>
 		<div class="row">
 			<div class="col-md-12">
-				<h3>รายการกระทู้ของฉัน</h3>
+				<h3>ข้อมูลของฉัน</h3>
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<thead>
