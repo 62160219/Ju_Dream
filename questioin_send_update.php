@@ -36,7 +36,7 @@
 														
 	if($result){
 		echo "แก้ไขข้อมูลได้สำเร็จ";
-		echo"<url=questioin_me.php'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
+		echo"<meta http-equiv='refresh' content='1;url=questioin_me.php'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
 	}
 	else{
 		echo "แก้ไขข้อมูลไม่สำเร็จ";
