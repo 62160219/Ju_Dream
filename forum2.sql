@@ -42,8 +42,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`m_id`, `m_type`, `email`, `password`, `m_name`, `m_created`, `m_image`) VALUES
-(5, 2, 'ji@g.com', '1234', 'Admin', '2022-08-17 09:51:26', 'Lenna.png'),
-(6, 1, 'member@m.com', '1234', 'User', '2022-08-17 09:52:48', 'admin.png');
+(5, 2, 'admin@admin.com', '1234', 'Admin', '2022-08-17 09:51:26', 'admin.png'),
+(6, 1, 'member@member.com', '1234', 'User', '2022-08-17 09:52:48', 'Lenna.png');
 
 -- --------------------------------------------------------
 

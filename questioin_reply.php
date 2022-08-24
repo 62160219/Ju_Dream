@@ -86,7 +86,7 @@
 						  </div>
 						  <input type="hidden" name="qt_id" value="<?php echo $_GET["qt_id"];?>">
 						  <button type="submit" class="btn btn-primary">บันทึก</button>
-						  <button type="reset" class="btn btn-default">ยกเลิก</button>
+						  <a href="index.php"class="btn btn-danger">ยกเลิก</a>
 						</form>
 				  </div>
 				</div>

@@ -33,7 +33,7 @@
                             <input type="file" accept="image/*" class="form-control" name="qt_image">
 						  </div>
 						  <button type="submit" name="register" value="register"  class="btn btn-primary">สร้าง</button>
-						  <button type="reset" class="btn btn-default">ยกเลิก</button>
+						  <a href="index.php"class="btn btn-danger">ยกเลิก</a>
 						</form>
 				  </div>
 				</div>

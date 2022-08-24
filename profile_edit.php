@@ -35,7 +35,7 @@
 						  </div>
 						   <input type="hidden" name="m_id" id="m_id" value="<?php echo $row["m_id"];?>"  />
 						  <button type="submit" class="btn btn-primary">บันทึก</button>
-						  <button type="reset" class="btn btn-default">ยกเลิก</button>
+						  <a href="profile.php"class="btn btn-danger">ยกเลิก</a>
 						</form>
 				  </div>
 				</div>
