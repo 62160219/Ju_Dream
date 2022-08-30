@@ -25,11 +25,11 @@ if (isset($_POST['register'])) {
 
 	if($result){
 		echo "บันทึกข้อมูลได้สำเร็จ";
-		echo"<meta http-equiv='refresh' content='1;url=questioin_me.php'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
+		echo"<meta http-equiv='refresh' content='1;url=index.php'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
 	}
 	else{
 		echo "บันทึกข้อมูลไม่สำเร็จ";
-		echo"<meta http-equiv='refresh' content='1;url=questioin_me.php'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
+		echo"<meta http-equiv='refresh' content='1;url=index.php'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
 	}
 }
 ?>

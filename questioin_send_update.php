@@ -36,11 +36,11 @@
 														
 	if($result){
 		echo "แก้ไขข้อมูลได้สำเร็จ";
-		echo"<meta http-equiv='refresh' content='1;url=questioin_me.php'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
+		echo"<meta http-equiv='refresh' content='1;url=index.php'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
 	}
 	else{
 		echo "แก้ไขข้อมูลไม่สำเร็จ";
-		echo"<meta http-equiv='refresh' content='1;url=questioin_edit.php?edit=".$_POST["qt_id"]."'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
+		echo"<meta http-equiv='refresh' content='1;url=index.php?edit=".$_POST["qt_id"]."'>";//คำสั่งเปลี่ยนหน้าโดยสามารถกำหนดเวลา
 	}
 	
 ?>
